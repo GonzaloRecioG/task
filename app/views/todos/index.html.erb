@@ -1,2 +1,23 @@
-<h1>Todos#index</h1>
-<p>Find me in app/views/todos/index.html.erb</p>
+<h1>Welcome to the Todo List</h1>
+
+<%= link_to 'Add new Todo', new_todo_path %>
+
+<% if @todos.size == 0 %>
+<p>You have no Todos. Why not add <%=link_to 'todo', new_todo_path%>?</p>
+<% else %>
+<% @todos.each do |element| %>
+  <h2><%=link_to element.title, todo_path(element) %></h2>
+  <%=link_to "<i class='fa fa-pencil-square-o'></i>".html_safe, edit_todo_path(element), class: "icons"%>
+
+  <!-- <%=link_to "<i class='fa fa-eye'></i>".html_safe, todo_path(element), class: "icons"%>we can also say todos_path or @todos instead of root_path -->
+
+  <%=link_to "<i class='fa fa-check'></i>".html_safe, todo_path(element), method: :delete, class: "icons"%>
+
+
+  <!-- <%=link_to todo_path(element), method: :delete, data: { confirm: 'Are you sure?' } do %>
+    <i class='fa fa-check'></i>
+  <% end %> this method is way better-->
+
+  <% end %>
+
+<% end %>

@@ -1,3 +1,46 @@
 // Place all the styles related to the Todos controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@font-face { font-family: Avenir; src: url('avenir.ttc'); }
+
+
+body {
+  font-family: Avenir;
+  text-align: center;
+  padding: 60px 20px;
+  color: white;
+  font-size: 20px;
+  background: #4b6cb7; /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(right, #4b6cb7, #182848);
+  background: -o-linear-gradient(right, #4b6cb7, #182848);
+  background: linear-gradient(to left, #4b6cb7, #182848); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
+  h2 {
+    color: #062F82;
+    opacity: 0.4;
+  }
+
+   h2:hover {
+    opacity: 0.8;
+  }
+
+  .icons {
+
+    font-size: 30px;
+    margin: 2px;
+    padding: 10px;
+
+  }
+
+  .icons:hover {
+
+    opacity: 0.8;
+
+  }

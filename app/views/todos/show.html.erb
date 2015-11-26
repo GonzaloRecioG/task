@@ -1,2 +1,15 @@
-<h1>Todos#show</h1>
-<p>Find me in app/views/todos/show.html.erb</p>
+<%#= params %>
+
+
+
+<h1><%= @todo.title %></h1>
+<p>Created at: <%= @todo.created_at %></p>
+<p>Last update: <%= @todo.updated_at %></p>
+
+<p><%=link_to 'Back', todos_path%></p>
+
+
+
+
+
+
